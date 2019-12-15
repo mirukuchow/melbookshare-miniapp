@@ -1,8 +1,8 @@
 {
 	"miniprogramRoot": "dist/",
-	"projectname": "test",
+	"projectname": "bookShareMiniprogram",
 	"description": "test",
-	"appid": "wx3dfc2961862ee7d2",
+	"appid": "wx78bd9cdfbd87cc09",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,

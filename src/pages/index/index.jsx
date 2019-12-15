@@ -1,47 +1,52 @@
 import Taro, { useState } from "@tarojs/taro";
 import { View } from "@tarojs/components";
-import { AtSearchBar, AtCard } from "taro-ui";
+import Publish from './../publish'
+import { AtTabBar } from "taro-ui";
 import "./index.scss";
-import { DOUBAN_API } from "../../constants";
 
-const SearchPage = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [books, setBooks] = useState([]);
 
-  const searchBook = async () => {
-    // doubanAPI: https://douban-api-docs.zce.me/book.html#get_book_search
-    Taro.request({
-      url: `${DOUBAN_API}?q=${searchTerm}`,
-      header: {
-        "Content-type": "application/text"
-      }
-    }).then(res => {
-      setBooks(res.data.books);
-      console.log(res.data.books);
-    });
-  };
+const tabList = [
+  { title: '首页', iconType: 'home'},
+  { title: '发布', iconType: 'add'},
+  { title: '我的', iconType: 'user'}
+]
 
-  return (
-    <View>
-      <AtSearchBar
-        showActionButton
-        value={searchTerm}
-        onChange={setSearchTerm}
-        onActionClick={searchBook}
-      />
-      {books.map(book => (
-        <AtCard
-          key={book.id}
-          note={`${book.summary.substring(0, 50)}...`}
-          extra={book.rating.average}
-          title={book.title}
-          thumb={book.images.small}
-        >
-          作者 {book.author.join("")}
-        </AtCard>
-      ))}
-    </View>
-  );
-};
+//navBar Component
+export default class Index extends Taro.Component {
 
-export default SearchPage;
+  constructor(props){
+    super(props);
+    this.state={
+      current: 0
+    }
+  }
+
+  handleClick(value){
+    this.setState({
+      current: value
+    })
+  }
+  componentDidMount(){
+    Taro.setNavigationBarTitle({
+      title: tabList[this.state.current].title
+    })
+  }
+  componentDidUpdate(){
+    Taro.setNavigationBarTitle({
+      title: tabList[this.state.current].title
+    })
+  }
+  render(){
+    return(
+      <View>
+          {this.state.current===1 && <Publish />}
+          <AtTabBar
+            fixed
+            tabList={tabList}
+            onClick={this.handleClick.bind(this)}
+            current={this.state.current}
+          />
+      </View>
+    )
+  }
+}
