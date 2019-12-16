@@ -1,0 +1,22 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "name": "同情者",
+      "price": "0-5",
+      "image": {"src": "https://img9.doubanio.com/view/subject/l/public/s29852464.jpg"}
+    },
+    {
+      "id": 2,
+      "name": "ねこだらけ",
+      "price": "40",
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s27270562.jpg"}
+    },
+    {
+      "id": 3,
+      "name": "好小猫",
+      "price": "3-5.5",
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s28061222.jpg"}
+    }
+  ]
+}
