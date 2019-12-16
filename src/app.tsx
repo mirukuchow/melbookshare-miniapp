@@ -1,7 +1,7 @@
-import Taro, { Component, Config } from '@tarojs/taro'
-import Index from './pages/index'
-import '@tarojs/async-await'
-import './assets/styles/app.scss'
+import Taro, { Component, Config } from "@tarojs/taro";
+import Index from "./pages/index";
+import "@tarojs/async-await";
+import "./assets/styles/app.scss";
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -10,7 +10,6 @@ import './assets/styles/app.scss'
 // }
 
 class App extends Component {
-
   /**
    * 指定config的类型声明为: Taro.Config
    *
@@ -20,57 +19,58 @@ class App extends Component {
    */
   config = {
     pages: [
-      'pages/index/index',
-      'pages/publish/index',
-      'pages/user/index'
+      "pages/index/index",
+      "pages/market/index",
+      "pages/publish/index",
+      "pages/user/profile"
     ],
     window: {
-      backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
+      backgroundTextStyle: "light",
+      navigationBarBackgroundColor: "#fff",
+      navigationBarTitleText: "WeChat",
+      navigationBarTextStyle: "black"
     },
     tabBar: {
-      color: '#333',
-      selectedColor: '#333',
-      backgroundColor: '#fff',
-      position: 'bottom',
+      color: "#A5B0C4",
+      selectedColor: "#384F7D",
+      backgroundColor: "#fff",
+      position: "bottom",
       list: [
         {
-        pagePath: 'pages/index/index',
-        text: '首页',
-        iconPath: 'images/home.png',
-        selectedIconPath: 'images/home.png'
-        },{
-        pagePath: 'pages/publish/index',
-        text: '添加',
-        iconPath: 'images/add.png',
-        selectedIconPath: 'images/add.png'
-        }, {
-        pagePath: 'pages/user/index',
-        text: '我的',
-        iconPath: 'images/my.png',
-        selectedIconPath: 'images/my.png'
+          pagePath: "pages/index/index",
+          text: "首页",
+          iconPath: "assets/icons/home-normal.png",
+          selectedIconPath: "assets/icons/home.png"
+        },
+        {
+          pagePath: "pages/publish/index",
+          text: "添加",
+          iconPath: "assets/icons/add-normal.png",
+          selectedIconPath: "assets/icons/add.png"
+        },
+        {
+          pagePath: "pages/user/profile",
+          text: "我的",
+          iconPath: "assets/icons/my-normal.png",
+          selectedIconPath: "assets/icons/my.png"
         }
       ]
     }
-  }
+  };
 
-  componentDidMount () {}
+  componentDidMount() {}
 
-  componentDidShow () {}
+  componentDidShow() {}
 
-  componentDidHide () {}
+  componentDidHide() {}
 
-  componentDidCatchError () {}
+  componentDidCatchError() {}
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
-  render () {
-    return (
-      <Index />
-    )
+  render() {
+    return <Index />;
   }
 }
 
-Taro.render(<App />, document.getElementById('app'))
+Taro.render(<App />, document.getElementById("app"));

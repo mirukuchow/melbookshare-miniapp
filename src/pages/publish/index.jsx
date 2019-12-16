@@ -1,7 +1,6 @@
 import Taro, { useState } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import { AtSearchBar, AtCard } from "taro-ui";
-import "./index.scss";
 import { DOUBAN_API } from "../../constants";
 
 const SearchPage = () => {
