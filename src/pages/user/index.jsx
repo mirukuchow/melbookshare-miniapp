@@ -5,19 +5,14 @@ import "./index.scss";
 
 //navBar Component
 export default class Index extends Taro.Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       current: 0
-    }
+    };
   }
 
-  render(){
-    return(
-      <View>
-        User
-      </View>
-    )
+  render() {
+    return <View>User</View>;
   }
 }

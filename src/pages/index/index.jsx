@@ -5,41 +5,49 @@ import "./index.scss";
 
 //navBar Component
 export default class Index extends Taro.Component {
-
   config = {
-    navigationBarTitleText: '猫本书友'
-  }
+    navigationBarTitleText: "猫本书友"
+  };
 
   state = {
     books: []
-  }
+  };
 
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       current: 0
-    }
+    };
   }
 
   async componentWillMount() {
     const response = await Taro.request({
-      url: `${ API_DB }/books`
-    })
-    console.log(response)
+      url: `${API_DB}/books`
+    });
+    console.log(response);
 
     this.setState({
       books: response.data
-    })
-
+    });
   }
 
-  render(){
-    const { books } = this.state
+  render() {
+    const { books } = this.state;
 
-    return(
+    return (
       <View className='index'>
-        Home
+        <AtList>
+          {books.map(book => (
+            <AtListItem
+              key={book.id}
+              arrow='down'
+              thumb={book.image.src}
+              title={book.name}
+              note={"$" + book.price}
+            />
+          ))}
+        </AtList>
       </View>
-    )
+    );
   }
 }

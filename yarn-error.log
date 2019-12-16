@@ -1,8 +1,8 @@
 Arguments: 
-  C:\devtools\nodejs\node.exe C:\devtools\nvm\npm\node_modules\yarn\bin\yarn.js add src/components/tabBar --silent --no-progress
+  C:\devtools\nodejs\node.exe C:\devtools\nvm\npm\node_modules\yarn\bin\yarn.js add @tarojs/taro --silent --no-progress
 
 PATH: 
-  C:\devtools\nvm\npm\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\Semi\Desktop\bookShareMiniprogram\node_modules\.bin;C:\devtools\nvm\npm\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\Semi\Desktop\bookShareMiniprogram\node_modules\.bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\ProgramData\chocolatey\bin;C:\devtools\nvm;C:\devtools\nodejs;C:\Users\Semi\AppData\Local\Microsoft\WindowsApps;C:\Users\Semi\AppData\Local\atom\bin;C:\devtools\cmder;C:\Users\Semi\AppData\Local\GitHubDesktop\bin;C:\devtools\nvm\npm;C:\Users\Semi\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\devtools\cmder\vendor\bin;C:\devtools\cmder\bin;C:\devtools\cmder;C:\devtools\cmder\vendor\bin;C:\devtools\cmder
+  C:\devtools\nvm\npm\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\Semi\Desktop\melbookshare-miniapp\node_modules\.bin;C:\devtools\nvm\npm\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\Semi\Desktop\melbookshare-miniapp\node_modules\.bin;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\PuTTY\;C:\ProgramData\chocolatey\bin;C:\devtools\nvm;C:\devtools\nodejs;C:\Program Files\Git\cmd;C:\Users\Semi\AppData\Local\Microsoft\WindowsApps;C:\Users\Semi\AppData\Local\atom\bin;C:\Windows\System32;C:\devtools\cmder;C:\Users\Semi\AppData\Local\GitHubDesktop\bin;C:\devtools\nvm\npm;C:\Users\Semi\AppData\Local\hyper\app-3.0.2\resources\bin;C:\Python27;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\devtools\cmder\vendor\bin;C:\devtools\cmder\bin;C:\devtools\cmder;C:\devtools\cmder\vendor\bin;C:\devtools\cmder
 
 Yarn version: 
   1.21.1
@@ -14,17 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://registry.npmjs.org/src%2fcomponents/tabBar: Request "https://registry.npmjs.org/src%2fcomponents/tabBar" returned a 405
-      at Request.params.callback [as _callback] (C:\devtools\nvm\npm\node_modules\yarn\lib\cli.js:66956:18)
-      at Request.self.callback (C:\devtools\nvm\npm\node_modules\yarn\lib\cli.js:140665:22)
-      at Request.emit (events.js:219:5)
-      at Request.<anonymous> (C:\devtools\nvm\npm\node_modules\yarn\lib\cli.js:141637:10)
-      at Request.emit (events.js:219:5)
-      at IncomingMessage.<anonymous> (C:\devtools\nvm\npm\node_modules\yarn\lib\cli.js:141559:12)
-      at Object.onceWrapper (events.js:308:28)
-      at IncomingMessage.emit (events.js:224:7)
-      at endReadableNT (_stream_readable.js:1206:12)
-      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+  Error: EPERM: operation not permitted, unlink 'C:\Users\Semi\Desktop\melbookshare-miniapp\node_modules\acorn-dynamic-import\node_modules\.bin'
 
 npm manifest: 
   {
@@ -53,7 +43,8 @@ npm manifest:
       "dev:h5": "npm run build:h5 -- --watch",
       "dev:rn": "npm run build:rn -- --watch",
       "dev:qq": "npm run build:qq -- --watch",
-      "dev:quickapp": "npm run build:quickapp -- --watch"
+      "dev:quickapp": "npm run build:quickapp -- --watch",
+      "dev:server": "json-server --watch src/assets/db.json --port 3333"
     },
     "author": "",
     "license": "MIT",
@@ -62,7 +53,7 @@ npm manifest:
       "@tarojs/components": "1.3.27",
       "@tarojs/components-qa": "1.3.27",
       "@tarojs/router": "1.3.27",
-      "@tarojs/taro": "1.3.27",
+      "@tarojs/taro": "^2.0.0-beta.8",
       "@tarojs/taro-alipay": "1.3.27",
       "@tarojs/taro-h5": "1.3.27",
       "@tarojs/taro-qq": "1.3.27",
@@ -369,10 +360,22 @@ Lockfile:
     dependencies:
       "@tarojs/utils" "1.3.27"
   
+  "@tarojs/taro@^2.0.0-beta.8":
+    version "2.0.0-beta.8"
+    resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-2.0.0-beta.8.tgz#627dae313832b8dc4b4a92985337f323b2ccb52c"
+    integrity sha512-IKi6UllUQgKgVEvOogdBo3Fpm42vn4KG72n3ZchBekR6TA7YA83kVpkLhn7+xWnpq0cO+M22BmBSBNXA4XABTw==
+    dependencies:
+      "@tarojs/utils" "2.0.0-beta.8"
+  
   "@tarojs/utils@1.3.27":
     version "1.3.27"
     resolved "https://registry.yarnpkg.com/@tarojs/utils/-/utils-1.3.27.tgz#49d706afd10825fecec2d8a50414ab4a797fd7b6"
     integrity sha512-H6168l4Xs0fflFgZPUeAKTJKpv2jR3UxSA3hOppWCmRvmztYgCLT7+MJqzsILbDr8LGAgBMJKttvKvf6UBNqvQ==
+  
+  "@tarojs/utils@2.0.0-beta.8":
+    version "2.0.0-beta.8"
+    resolved "https://registry.yarnpkg.com/@tarojs/utils/-/utils-2.0.0-beta.8.tgz#8a3b4b28c3bfb68b70cdeebc85a1d64a1616b467"
+    integrity sha512-ivTqiGux9PJevv8+S7YGsEsLTDUYwkIeYVLHLvst3NdrFxi4u797PVbD9l9iRf5b6nBxyuJHnJm8AqwL6Th4sg==
   
   "@tarojs/webpack-runner@1.3.27":
     version "1.3.27"
