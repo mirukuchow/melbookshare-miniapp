@@ -2,7 +2,7 @@ import Taro, { Component, Config } from '@tarojs/taro'
 import Index from './pages/index'
 import '@tarojs/async-await'
 import './app.scss'
-import 'taro-ui/dist/style/index.scss' 
+import 'taro-ui/dist/style/index.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -19,15 +19,41 @@ class App extends Component {
    * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
-  config: Config = {
+  config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/publish/index',
+      'pages/user/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      color: '#333',
+      selectedColor: '#333',
+      backgroundColor: '#fff',
+      position: 'bottom',
+      list: [
+        {
+        pagePath: 'pages/index/index',
+        text: '首页',
+        iconPath: 'images/home.png',
+        selectedIconPath: 'images/home.png'
+        },{
+        pagePath: 'pages/publish/index',
+        text: '添加',
+        iconPath: 'images/add.png',
+        selectedIconPath: 'images/add.png'
+        }, {
+        pagePath: 'pages/user/index',
+        text: '我的',
+        iconPath: 'images/my.png',
+        selectedIconPath: 'images/my.png'
+        }
+      ]
     }
   }
 

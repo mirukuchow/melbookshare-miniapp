@@ -16,7 +16,7 @@ export default class Index extends Taro.Component {
   render(){
     return(
       <View>
-        Home
+        User
       </View>
     )
   }
