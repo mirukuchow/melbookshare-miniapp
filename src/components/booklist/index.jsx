@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro';
-import { View, Image, Text } from '@tarojs/components';
+import { View } from '@tarojs/components';
 import BookListItem from '../booklist-item';
 
 class BookList extends Component {
@@ -11,12 +11,11 @@ class BookList extends Component {
 
   render() {
     const { data: books } = this.props;
-
     return(
       <View>
         {books.map(book =>
           <BookListItem key={book.id} data={book} />
-      )}
+        )}
       </View>
     )
   }

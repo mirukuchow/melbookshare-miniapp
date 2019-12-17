@@ -3,10 +3,6 @@ import { View } from '@tarojs/components';
 import classNames from 'classnames'
 
 class Placeholder extends Component {
-  //Using global custom styles in app.scss
-  static options = {
-    addGlobalClass: true
-  }
 
   static defaultProps = {
     quantity: 1,
@@ -14,6 +10,10 @@ class Placeholder extends Component {
     className: '',
   }
 
+  //Using global custom styles in app.scss
+  static options = {
+    addGlobalClass: true
+  }
 
   render() {
     const classValue = classNames(

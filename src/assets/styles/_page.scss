@@ -1,11 +1,14 @@
 .page {
+  
+  background: rgba(56, 79, 125, 0.05);
+
   &-demo {
     font-weight: 200;
     font-size: 16px * $hd;
-    //text-align: center;
-    //display: flex;
-    //align-items: center;
-    //justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 90vh;
   }
 }
