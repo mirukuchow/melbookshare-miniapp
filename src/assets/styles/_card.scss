@@ -1,0 +1,14 @@
+.card {
+  &-img-top {
+    width: 100%;
+  }
+
+  &-title {
+    font-size: $font-size-xl;
+    font-weight: bold;
+  }
+
+  &-subtitle {
+    font-size: $font-size-lg;
+  }
+}

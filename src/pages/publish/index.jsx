@@ -1,7 +1,7 @@
-import Taro, { useState } from "@tarojs/taro";
-import { View } from "@tarojs/components";
-import { AtSearchBar, AtCard } from "taro-ui";
-import { DOUBAN_API } from "../../constants";
+import Taro, {useState} from "@tarojs/taro";
+import {View} from "@tarojs/components";
+import {AtSearchBar, AtCard} from "taro-ui";
+import {DOUBAN_API} from "../../constants";
 
 const SearchPage = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -27,7 +27,7 @@ const SearchPage = () => {
         value={searchTerm}
         onChange={setSearchTerm}
         onActionClick={searchBook}
-      />
+      />{" "}
       {books.map(book => (
         <AtCard
           key={book.id}
@@ -36,9 +36,9 @@ const SearchPage = () => {
           title={book.title}
           thumb={book.images.small}
         >
-          作者 {book.author.join("")}
+          作者 {book.author.join("")}{" "}
         </AtCard>
-      ))}
+      ))}{" "}
     </View>
   );
 };
