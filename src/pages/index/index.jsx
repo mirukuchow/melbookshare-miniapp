@@ -32,7 +32,7 @@ export default class Index extends Taro.Component {
     const { books, placeholder } = this.state;
 
     return (
-      <View>
+      <View className='result__bg'>
         <SearchBar />
         <Placeholder className='m-3' quantity='10' show={placeholder} />
         <BookList data={books} />

@@ -5,3 +5,57 @@
 @import "page";
 @import "card";
 @import 'placeholder';
+
+
+.result__bg{
+  //background: rgba(56, 79, 125, 0.05);
+  background: rgba(56, 79, 125, 0.05);
+}
+
+.card__item {
+  display: flex;
+  justify-content: space-between;
+  padding: $spacer;
+  @include hairline-bottom();
+
+  background: #FFFFFF;
+  box-shadow: 4px 12px 25px rgba(204, 204, 204, 0.15);
+  border-radius: 8px;
+
+  &-image {
+    width: 120px * $hd;
+    height: 120px * $hd;
+  }
+
+  &-content {
+    font-size: $font-size-base;
+    flex: 1;
+
+    &-header {
+      margin-top: 0;
+    }
+
+    &-subtitle {
+      font-size: $font-size-sm;
+    }
+
+    &-footer {
+      font-size: $font-size-sm;
+      &-sm {
+        display: inline-block;
+        width: 26%;
+      }
+      &-lg {
+        display: inline-block;
+        width: 34%;
+      }
+    }
+
+  }
+
+
+
+  &:nth-last-child(1)::after {
+    border-bottom-width: 0;
+  }
+}

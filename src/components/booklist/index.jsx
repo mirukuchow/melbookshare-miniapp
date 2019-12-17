@@ -13,7 +13,7 @@ class BookList extends Component {
     const { data: books } = this.props;
 
     return(
-      <View className='p-3'>
+      <View>
         {books.map(book =>
           <BookListItem key={book.id} data={book} />
       )}

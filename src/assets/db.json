@@ -3,26 +3,56 @@
     {
       "id": 1,
       "name": "同情者",
+      "author":"阮清越 [译]陈恒仕",
       "originalPrice": "65",
-      "priceRange": "0-5",
+      "priceFrom": "5",
       "quantity": "2",
       "image": {"src": "https://img9.doubanio.com/view/subject/l/public/s29852464.jpg"}
     },
     {
       "id": 2,
       "name": "ねこだらけ",
+      "author":"横山キムチ",
       "originalPrice": "36",
-      "priceRange": "40",
+      "priceFrom": "40",
       "quantity": "2",
       "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s27270562.jpg"}
     },
     {
       "id": 3,
-      "name": "好小猫",
-      "originalPrice": "39.90",
-      "priceRange": "3-5.5",
+      "name": "自我与本我",
+      "author":"西格蒙德·弗洛伊德",
+      "originalPrice": "39",
+      "priceFrom": "5",
       "quantity": "3",
-      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s28061222.jpg"}
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s27267781.jpg"}
+    },
+    {
+      "id": 4,
+      "name": "ねこだらけ",
+      "author":"横山キムチ",
+      "originalPrice": "36",
+      "priceFrom": "40",
+      "quantity": "2",
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s27270562.jpg"}
+    },
+    {
+      "id": 5,
+      "name": "ねこだらけ",
+      "author":"横山キムチ",
+      "originalPrice": "36",
+      "priceFrom": "40",
+      "quantity": "2",
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s27270562.jpg"}
+    },
+    {
+      "id": 6,
+      "name": "自我与本我",
+      "author":"西格蒙德·弗洛伊德",
+      "originalPrice": "39.90",
+      "priceFrom": "5",
+      "quantity": "3",
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s27267781.jpg"}
     }
   ]
 }
