@@ -13,6 +13,7 @@ async function fetchData({
   let queryParams = {}
 
   if(search) queryParams.q = search
+  if(filters) queryParams.filters = filters
   if(page) queryParams._page = page
   if(pageSize) queryParams._limit = pageSize
 
