@@ -1,6 +1,6 @@
 {
 	"miniprogramRoot": "dist/",
-	"projectname": "bookShareMiniprogram",
+	"projectname": "MelbookShare",
 	"description": "test",
 	"appid": "wx78bd9cdfbd87cc09",
 	"setting": {
