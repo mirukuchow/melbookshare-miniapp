@@ -1,4 +1,4 @@
-import Taro, { Component, setState } from "@tarojs/taro";
+import Taro, { Component } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 import "./../../assets/styles/app.scss";
