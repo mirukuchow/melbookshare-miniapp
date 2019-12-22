@@ -1,45 +1,25 @@
-import Taro, { Component } from '@tarojs/taro';
-import { View } from '@tarojs/components';
-import classNames from 'classnames'
+import Taro, { Component, setState } from "@tarojs/taro";
+import { View } from "@tarojs/components";
+import classNames from "classnames";
+import "./../../assets/styles/app.scss";
 
-class Placeholder extends Component {
+function Placeholder({ className = '', quantity = 1, show = false }) {
+  const amount = parseInt(quantity);
+  const classValue = classNames("ui placeholder", className);
+  const items = [...Array(amount).keys()];
 
-  static defaultProps = {
-    quantity: 1,
-    show: false,
-    className: '',
-  }
-
-  //Using global custom styles in app.scss
-  static options = {
-    addGlobalClass: true
-  }
-
-  render() {
-    const classValue = classNames(
-      'ui placeholder',
-      this.props.className
-    )
-    const quantity = parseInt(this.props.quantity)
-    const items = [...Array(quantity).keys()]
-
-    const { show } = this.props
-
-    return(
-      <View>
-      {
-        show &&
-        items.map(i =>
+  return (
+    <View>
+      {show &&
+        items.map(i => (
           <View key={i} className={classValue}>
-            <View className='image rectangular'></View>
-            <View className='line'></View>
-            <View className='very short line'></View>
+            <View className="image rectangular"></View>
+            <View className="line"></View>
+            <View className="very short line"></View>
           </View>
-        )
-      }
-      </View>
-    )
-  }
+        ))}
+    </View>
+  );
 }
 
 export default Placeholder;

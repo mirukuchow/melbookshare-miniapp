@@ -2,19 +2,15 @@ import Taro, { Component } from '@tarojs/taro';
 import { View } from '@tarojs/components';
 import { AtSearchBar } from 'taro-ui'
 
-class SearchBar extends Component {
-  render() {
-    return(
+const SearchBar = ({value, onChange, onActionClick, onConfirm}) => (
       <View>
         <AtSearchBar
-          value={this.props.value}
-          onChange={this.props.onChange}
-          onActionClick={this.props.onActionClick}
-          onConfirm={this.props.onConfirm}
+          value={value}
+          onChange={onChange}
+          onActionClick={onActionClick}
+          onConfirm={onConfirm}
         />
       </View>
-    )
-  }
-}
+)
 
 export default SearchBar;
