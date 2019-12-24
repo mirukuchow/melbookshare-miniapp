@@ -1,0 +1,131 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "同情者",
+      "sourceId": "30181683",
+      "image": {"src": "https://img9.doubanio.com/view/subject/l/public/s29852464.jpg"},
+      "author":"阮清越 [译]陈恒仕",
+      "rating": "8.5",
+      "availableBooks": 2,
+      "originalPrice": "65",
+      "priceFrom": "5"
+
+    },
+    {
+      "id": 2,
+      "title": "ねこだらけ",
+      "sourceId": "6001310",
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s27270562.jpg"},
+      "author":"横山キムチ",
+      "rating": "8.9",
+      "availableBooks": 1,
+      "originalPrice": "39",
+      "priceFrom": "4"
+
+    },
+    {
+      "id": 3,
+      "title": "自我与本我",
+      "sourceId": "6797700",
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s27267781.jpg"},
+      "author":"西格蒙德·弗洛伊德",
+      "rating": "8.3",
+      "availableBooks": 1,
+      "originalPrice": "28",
+      "priceFrom": "1"
+
+    },
+    {
+      "id": 4,
+      "title": "国境以南 太阳以西",
+      "sourceId": "2174013",
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s2634110.jpg"},
+      "author":"春上春树",
+      "rating": "8.4",
+      "availableBooks": 1,
+      "originalPrice": "15",
+      "priceFrom": "2"
+
+    },
+    {
+      "id": 5,
+      "title": "ねこだらけ",
+      "sourceId": "6001310",
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s27270562.jpg"},
+      "author":"横山キムチ",
+      "rating": "8.9",
+      "availableBooks": 1,
+      "originalPrice": "39",
+      "priceFrom": "4"
+
+    },
+    {
+      "id": 6,
+      "title": "自我与本我",
+      "sourceId": "6797700",
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s27267781.jpg"},
+      "author":"西格蒙德·弗洛伊德",
+      "rating": "8.3",
+      "availableBooks": 1,
+      "originalPrice": "28",
+      "priceFrom": "1"
+
+    },
+    {
+      "id": 7,
+      "title": "国境以南 太阳以西",
+      "sourceId": "2174013",
+      "image": {"src": "https://img3.doubanio.com/view/subject/l/public/s2634110.jpg"},
+      "author":"春上春树",
+      "rating": "8.4",
+      "availableBooks": 1,
+      "originalPrice": "15",
+      "priceFrom": "2"
+    }
+  ],
+  "copies": [
+    {
+      "id": 1,
+      "sourceId": "30181683",
+      "ownerId": 100001,
+      "price": 5,
+      "condition": "稍有磨损",
+      "comment": "一本还可以的书！",
+      "contact": "paopaoinsomnia",
+      "location": "Melbourne, VIC",
+      "book": 1,
+      "owner": 1
+    },
+    {
+      "id": 2,
+      "sourceId": "30181683",
+      "ownerId": 100001,
+      "price": 1,
+      "condition": "封面没有了",
+      "comment": "没什么想说的！",
+      "contact": "paopaoawake",
+      "location": "St Kilda, VIC",
+      "book": 1,
+      "owner": 1
+    }
+  ],
+  "users": [
+    {
+      "id":1,
+      "userId": 21311231245123,
+      "alias": "失眠的泡泡",
+      "avatar": "dkawdj129301",
+      "ownedBooks": 1
+
+    },
+    {
+      "id":2,
+      "userId": 21311231245124,
+      "alias": "醒来的泡泡",
+      "avatar": "ddawd129201",
+      "ownedBooks": 1
+
+    }
+  ]
+}

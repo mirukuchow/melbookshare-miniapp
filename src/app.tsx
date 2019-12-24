@@ -1,8 +1,7 @@
-import Taro, { Component, Config } from '@tarojs/taro'
-import Index from './pages/index'
-import '@tarojs/async-await'
-import './app.scss'
-import 'taro-ui/dist/style/index.scss' 
+import Taro, { Component, Config } from "@tarojs/taro";
+import "@tarojs/async-await";
+import Index from "./pages/index";
+import "./assets/styles/app.scss";
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -11,7 +10,6 @@ import 'taro-ui/dist/style/index.scss'
 // }
 
 class App extends Component {
-
   /**
    * 指定config的类型声明为: Taro.Config
    *
@@ -19,33 +17,60 @@ class App extends Component {
    * 对于像 navigationBarTextStyle: 'black' 这样的推导出的类型是 string
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
-  config: Config = {
+  config = {
     pages: [
-      'pages/index/index'
+      "pages/index/index",
+      "pages/market/index",
+      "pages/publish/index",
+      "pages/user/profile"
     ],
     window: {
-      backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
+      backgroundTextStyle: "light",
+      navigationBarBackgroundColor: "#fff",
+      navigationBarTitleText: "WeChat",
+      navigationBarTextStyle: "black"
+    },
+    tabBar: {
+      color: "#A5B0C4",
+      selectedColor: "#384F7D",
+      backgroundColor: "#fff",
+      position: "bottom",
+      list: [
+        {
+          pagePath: "pages/index/index",
+          text: "首页",
+          iconPath: "assets/icons/home-normal.png",
+          selectedIconPath: "assets/icons/home.png"
+        },
+        {
+          pagePath: "pages/publish/index",
+          text: "添加",
+          iconPath: "assets/icons/add-normal.png",
+          selectedIconPath: "assets/icons/add.png"
+        },
+        {
+          pagePath: "pages/user/profile",
+          text: "我的",
+          iconPath: "assets/icons/my-normal.png",
+          selectedIconPath: "assets/icons/my.png"
+        }
+      ]
     }
-  }
+  };
 
-  componentDidMount () {}
+  componentDidMount() {}
 
-  componentDidShow () {}
+  componentDidShow() {}
 
-  componentDidHide () {}
+  componentDidHide() {}
 
-  componentDidCatchError () {}
+  componentDidCatchError() {}
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
-  render () {
-    return (
-      <Index />
-    )
+  render() {
+    return <Index />;
   }
 }
 
-Taro.render(<App />, document.getElementById('app'))
+Taro.render(<App />, document.getElementById("app"));

@@ -1,13 +1,26 @@
 {
 	"miniprogramRoot": "dist/",
-	"projectname": "test",
+	"projectname": "MelbookShare",
 	"description": "test",
-	"appid": "wx3dfc2961862ee7d2",
+	"appid": "wx78bd9cdfbd87cc09",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": false,
 		"postcss": false,
-		"minified": false
+		"minified": false,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",
