@@ -6,8 +6,7 @@
 @import "card";
 @import 'placeholder';
 
-
-.card__item {
+.card__book {
   display: flex;
   justify-content: space-between;
   padding: $spacer;
@@ -47,9 +46,90 @@
     }
 
   }
+  &:nth-last-child(1)::after {
+    border-bottom-width: 0;
+  }
+}
 
 
 
+.card__copy {
+  font-size: $font-size-sm;
+  justify-content: space-between;
+  padding: $spacer * 0.5;
+  @include hairline-bottom();
+
+  background: #FFFFFF;
+  box-shadow: 4px 12px 25px rgba(204, 204, 204, 0.15);
+  border-radius: 8px;
+
+  &-content {
+    display:block;
+    font-size: $font-size-xs;
+    flex: 1;
+    padding-left: 20px * $hd;
+    padding-right: 20px * $hd;
+
+    &-wechat {
+      display: flex;
+      position: relative;
+      align-items: center;
+
+      &-avatar {
+        width: 30px * $hd;
+        height: 30px * $hd;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
+      &-username {
+        display: inline-flex;
+        margin-left: 10px * $hd;
+      }
+      &-contact {
+        margin-top: 5px * $hd;
+        vertical-align: middle;
+        width: 46px * $hd;
+        height: 23px * $hd;
+        float: right;
+        opacity: 0.5;
+      }
+    }
+
+    &-comment {
+    }
+  }
+
+  &-footer {
+
+    font-size: $font-size-xs;
+
+    &-sm {
+      display: inline-block;
+      width: 26%;
+    }
+    &-lg {
+      display: inline-block;
+      width: 33%;
+    }
+  }
+
+  &-viewmore {
+    @include hairline-top();
+    margin-top: 10px * $hd;
+    padding-top: 5px * $hd;
+    padding-bottom: 5px * $hd;
+    display: flex;
+    &-text {
+      width: 85%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    &-button {
+      width: 14%;
+    }
+
+  }
   &:nth-last-child(1)::after {
     border-bottom-width: 0;
   }

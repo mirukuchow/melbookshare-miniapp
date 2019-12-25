@@ -1,17 +1,25 @@
-import Taro, { Component } from "@tarojs/taro";
+import Taro, { useState } from "@tarojs/taro";
 import { View } from "@tarojs/components";
-import BookListItem from "../booklist-item";
+import BookListBook from "../booklist-book";
+import BookListCopy from "../booklist-copy";
 import classNames from "classnames";
 import "./../../assets/styles/app.scss";
 
-const BookList = ({ data: books }) => (
-  <View>
-    {books &&
-      books.map(book => (
-      <BookListItem key={book.id} data={book} />
-    ))}
-  </View>
-);
+function BookList ({ data: books }) {
+
+
+
+  return(
+    <View>
+      {books &&
+        books.map(book => (
+        <View>
+          <BookListBook key={book.id} data={book} />
+        </View>
+      ))}
+    </View>
+  );
+};
 
 
 export default BookList;
