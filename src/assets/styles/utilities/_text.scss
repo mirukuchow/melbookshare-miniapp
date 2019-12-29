@@ -12,6 +12,14 @@
   }
 
   &-xs {
-    font-size: $font-size-xs;
+    font-size: $font-size-xs !important;
+  }
+
+  &-sm {
+    font-size: $font-size-xs !important;
+  }
+
+  &-base {
+    font-size: $font-size-base !important;
   }
 }

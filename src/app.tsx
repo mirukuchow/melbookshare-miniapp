@@ -22,6 +22,7 @@ class App extends Component {
       "pages/index/index",
       "pages/market/index",
       "pages/publish/index",
+      "pages/publish/addinfo",
       "pages/user/profile"
     ],
     window: {

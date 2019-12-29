@@ -5,20 +5,29 @@
 @import "page";
 @import "card";
 @import 'placeholder';
+@import "~taro-ui/dist/style/components/button.scss";
+@import "~taro-ui/dist/style/components/loading.scss";
+@import "~taro-ui/dist/style/components/form.scss";
+
+.button {
+  &-md {
+    width: 50%;
+  }
+}
 
 .card__book {
   display: flex;
   justify-content: space-between;
   padding: $spacer;
   @include hairline-bottom();
-
   background: #FFFFFF;
   box-shadow: 4px 12px 25px rgba(204, 204, 204, 0.15);
   border-radius: 8px;
 
   &-image {
-    width: 120px * $hd;
-    height: 120px * $hd;
+    max-width: 85px * $hd;
+    max-height: 120px * $hd;
+    margin-right: 5%;
   }
 
   &-content {
@@ -29,42 +38,55 @@
       margin-top: 0;
     }
 
+    &-rating {
+      margin-top: -15rpx;
+      margin-bottom: 10rpx;
+      margin-left: auto;
+      width: 40%;
+      font-size: 0.65rem;
+
+    }
+
     &-subtitle {
       font-size: $font-size-sm;
     }
 
     &-footer {
       font-size: $font-size-sm;
+
       &-sm {
         display: inline-block;
         width: 26%;
       }
+
       &-lg {
         display: inline-block;
         width: 34%;
       }
     }
-
+    &-button {
+      margin-top: -25px;
+      margin-left: 50%;
+      margin-right: 10%;
+    }
   }
+
   &:nth-last-child(1)::after {
     border-bottom-width: 0;
   }
 }
-
-
 
 .card__copy {
   font-size: $font-size-sm;
   justify-content: space-between;
   padding: $spacer * 0.5;
   @include hairline-bottom();
-
   background: #FFFFFF;
   box-shadow: 4px 12px 25px rgba(204, 204, 204, 0.15);
   border-radius: 8px;
 
   &-content {
-    display:block;
+    display: block;
     font-size: $font-size-xs;
     flex: 1;
     padding-left: 20px * $hd;
@@ -81,10 +103,12 @@
         border-radius: 50%;
         vertical-align: middle;
       }
+
       &-username {
         display: inline-flex;
         margin-left: 10px * $hd;
       }
+
       &-contact {
         margin-top: 5px * $hd;
         vertical-align: middle;
@@ -95,18 +119,17 @@
       }
     }
 
-    &-comment {
-    }
+    &-comment {}
   }
 
   &-footer {
-
     font-size: $font-size-xs;
 
     &-sm {
       display: inline-block;
       width: 26%;
     }
+
     &-lg {
       display: inline-block;
       width: 33%;
@@ -119,17 +142,19 @@
     padding-top: 5px * $hd;
     padding-bottom: 5px * $hd;
     display: flex;
+
     &-text {
       width: 85%;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
+
     &-button {
       width: 14%;
     }
-
   }
+
   &:nth-last-child(1)::after {
     border-bottom-width: 0;
   }

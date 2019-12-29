@@ -6,25 +6,29 @@ async function fetchData({
   search = "",
   page = "",
   pageSize = "",
+  bookid = "",
   success = () => {},
   fail = () => {}
 }) {
   let queryParams = {};
+  let path = `${resource}`;
 
   if (search) queryParams.q = search;
+  if (bookid) path = `${bookid}`;
   if (page) queryParams._page = page;
   if (pageSize) queryParams._limit = pageSize;
 
-  const path = `${resource}`;
 
-  const url = buildUrl(API_DB, {
+  const url = buildUrl(API_DOUBAN, {
     path,
     queryParams
   });
 
+  const header = { "Content-type": "application/text" };
+
   try {
-    console.log(queryParams)
-    const response = await Taro.request({ url });
+    console.log(url)
+    const response = await Taro.request({ url, header });
     const { statusCode } = response;
     switch (statusCode) {
       case 200:

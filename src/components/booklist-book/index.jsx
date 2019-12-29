@@ -2,7 +2,7 @@ import Taro, { useState } from "@tarojs/taro";
 import { View, Text, Image } from "@tarojs/components";
 import BookListCopy from "../booklist-copy";
 import classNames from "classnames";
-import "./../../assets/styles/app.scss";
+//import "./../../assets/styles/app.scss";
 
 function BookListBook({ data: book }) {
   const [showCopies, setShowCopies] = useState(false);

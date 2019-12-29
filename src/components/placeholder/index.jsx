@@ -1,7 +1,7 @@
 import Taro, { Component } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
-import "./../../assets/styles/app.scss";
+//import "./../../assets/styles/app.scss";
 
 function Placeholder({ className = '', quantity = 1, show = false }) {
   const amount = parseInt(quantity);
