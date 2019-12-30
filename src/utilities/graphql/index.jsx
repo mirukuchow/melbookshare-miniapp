@@ -2,7 +2,7 @@ import Taro from '@tarojs/taro'
 import ApolloClient from 'apollo-boost';
 
 const client = new ApolloClient({
-  uri: 'https://macadamia-s1su0d9l.pai.tcloudbase.com',
+  uri: 'https://peanut-xowb3v9b.pai.tcloudbase.com',
   fetch: (url, options) => Taro.request({
     url,
     method: options.method,
