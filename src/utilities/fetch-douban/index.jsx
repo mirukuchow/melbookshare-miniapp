@@ -1,5 +1,6 @@
 import Taro from "@tarojs/taro";
 import buildUrl from "build-url";
+import _ from "lodash";
 
 async function fetchData({
   resource = "",
@@ -18,6 +19,9 @@ async function fetchData({
   if (page) queryParams._page = page;
   if (pageSize) queryParams._limit = pageSize;
 
+  if (_.isEmpty(queryParams)) {
+    queryParams = null;
+  }
 
   const url = buildUrl(API_DOUBAN, {
     path,
@@ -27,7 +31,7 @@ async function fetchData({
   const header = { "Content-type": "application/text" };
 
   try {
-    console.log(url)
+    console.log(url);
     const response = await Taro.request({ url, header });
     const { statusCode } = response;
     switch (statusCode) {

@@ -3,10 +3,11 @@ import { View } from "@tarojs/components";
 import classNames from "classnames";
 //import "./../../assets/styles/app.scss";
 
-function Placeholder({ className = '', quantity = 1, show = false }) {
+function Placeholder({ className = '', quantity = 1, show = false, type = '' }) {
   const amount = parseInt(quantity);
   const classValue = classNames("ui placeholder", className);
   const items = [...Array(amount).keys()];
+
 
   return (
     <View>
