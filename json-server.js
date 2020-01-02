@@ -22,7 +22,6 @@ const getBook = sourceId => {
   return result;
 };
 
-
 const updateBookNewCopy = (sourceId, bookItem) => {
   const result = db
     .get("books")
@@ -54,7 +53,7 @@ const addCopy = copyItem => {
     .push(copyItem)
     .write();
   return result;
-}
+};
 
 // const copy = getCopy(1);
 // console.log(copy);
@@ -68,11 +67,11 @@ server.post("/books", (req, res) => {
     rating: req.body.rating,
     availableBooks: 1,
     originalPrice: req.body.originalPrice,
-    priceFrom: req.body.priceFrom
+    priceFrom: 0
   };
 
   let copyItem = {
-    sourceId: req.body.sourceId,
+    sourceId: parseInt(req.body.sourceId, 10),
     ownerId: req.body.ownerId,
     price: req.body.price,
     condition: req.body.condition,
@@ -81,15 +80,14 @@ server.post("/books", (req, res) => {
     location: req.body.contact,
     book: bookItem,
     owner: []
-  }
+  };
 
   const result = getBook(bookItem.sourceId);
   if (result) {
     console.log(true);
     bookItem.availableBooks = getBook(bookItem.sourceId).availableBooks + 1;
     updateBookNewCopy(bookItem.sourceId, bookItem);
-  }
-  else {
+  } else {
     addBook(bookItem);
     res.sendStatus("201");
   }
@@ -97,7 +95,6 @@ server.post("/books", (req, res) => {
 
   res.jsonp("success");
 });
-
 
 server.use(router);
 server.listen(3333, () => {

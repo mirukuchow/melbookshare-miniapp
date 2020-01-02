@@ -38,8 +38,35 @@ class AddInfo extends Component {
   }
 
   onSubmit(event) {
-    const { book, condition, location, price, contact, comment } = this.state;
+
     console.log(copyInfo);
+  }
+
+  submitCopy() {
+    const { book, condition, location, price, contact, comment } = this.state;
+    const response = Taro.request({
+      method: 'POST',
+      url: `${API_DB}/books`,
+      data: {
+        title: book.title,
+        sourceId: book.id,
+        image: book.images.small,
+        author: book.author,
+        rating: book.rating.average,
+        originalPrice: book.price,
+        price: price,
+        condition: condition,
+        comment: comment,
+        contact: contact,
+        location: location
+      }
+    })
+
+    switch(response, statusCode) {
+      case 200:
+        console.log("提交成功！")
+      break;
+    }
   }
 
   // Reusbale for all inputs
