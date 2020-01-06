@@ -13,7 +13,18 @@ class AddInfo extends Component {
     super(...arguments);
     this.fetchData = fetchDouban;
     this.state = {
-      book: {},
+      book: {
+        id: 1,
+        title: "同情者",
+        sourceId: "30181683",
+        images: {
+          small: "https://img9.doubanio.com/view/subject/l/public/s29852464.jpg"
+        },
+        author: "阮清越 [译]陈恒仕",
+        rating: {
+          average: "8.5"
+        }
+      },
       condition: "",
       location: "",
       price: "",
@@ -38,18 +49,15 @@ class AddInfo extends Component {
   }
 
   onSubmit(event) {
-
-    console.log(copyInfo);
-  }
-
-  submitCopy() {
     const { book, condition, location, price, contact, comment } = this.state;
+    console.log(this.state);
+    const { statusCode } = response;
     const response = Taro.request({
-      method: 'POST',
+      method: "POST",
       url: `${API_DB}/books`,
       data: {
         title: book.title,
-        sourceId: book.id,
+        sourceId: book.sourceId,
         image: book.images.small,
         author: book.author,
         rating: book.rating.average,
@@ -60,12 +68,12 @@ class AddInfo extends Component {
         contact: contact,
         location: location
       }
-    })
+    });
 
-    switch(response, statusCode) {
+    switch ((response, statusCode)) {
       case 200:
-        console.log("提交成功！")
-      break;
+        console.log("提交成功！");
+        break;
     }
   }
 
@@ -85,7 +93,7 @@ class AddInfo extends Component {
         <AtForm className="mx-2 p-3" onSubmit={this.onSubmit.bind(this)}>
           <AtInput
             name="condition"
-            title="大致品相1"
+            title="大致品相"
             type="text"
             placeholder="接近全新"
             value={this.state.conditon}

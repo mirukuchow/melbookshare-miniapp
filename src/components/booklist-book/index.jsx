@@ -1,11 +1,26 @@
-import Taro, { useState } from "@tarojs/taro";
+import Taro, { useState, useEffect } from "@tarojs/taro";
 import { View, Text, Image } from "@tarojs/components";
 import BookListCopy from "../booklist-copy";
 import classNames from "classnames";
 import "./../../assets/styles/app.scss";
+import fetchData from "../../utilities/fetch-data";
 
 function BookListBook({ data: book }) {
   const [showCopies, setShowCopies] = useState(false);
+  const [copies, setCopies] = useState()
+
+  useEffect(() => {
+    Taro.request({
+      method: "GET",
+      url: `${API_DB}/copies`,
+      data: {
+        sourceId: book.sourceId
+      }
+    }).then(({ data }) => {
+      setCopies(data);
+    })
+  }, [])
+
 
   return (
     <View>
@@ -38,7 +53,11 @@ function BookListBook({ data: book }) {
           </View>
         </View>
       </View>
-      {showCopies && <BookListCopy />}
+      {showCopies &&
+        copies.map(copy => (
+              <View><BookListCopy key={copy.id} data={copy} /></View>
+        ))
+      }
     </View>
   );
 }

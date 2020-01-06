@@ -3,7 +3,7 @@
     {
       "id": 1,
       "title": "同情者",
-      "sourceId": "30181683",
+      "sourceId": 30181683,
       "image": {
         "src": "https://img9.doubanio.com/view/subject/l/public/s29852464.jpg"
       },
@@ -17,27 +17,57 @@
   "copies": [
     {
       "id": 1,
-      "sourceId": "30181683",
-      "ownerId": 100001,
+      "sourceId": 30181683,
+      "ownerId": 21311231245123,
       "price": 5,
       "condition": "稍有磨损",
       "comment": "一本还可以的书！",
       "contact": "paopaoinsomnia",
       "location": "Melbourne, VIC",
-      "book": {},
-      "owner": {}
+      "book": {
+        "id": 1,
+        "title": "同情者",
+        "sourceId": "30181683",
+        "image": {
+          "src": "https://img9.doubanio.com/view/subject/l/public/s29852464.jpg"
+        },
+        "author": "阮清越 [译]陈恒仕",
+        "rating": "8.5"
+      },
+      "owner": {
+        "id": 1,
+        "userId": 21311231245123,
+        "alias": "失眠的泡泡",
+        "avatar": "dkawdj129301",
+        "ownedBooks": 1
+      }
     },
     {
       "id": 2,
-      "sourceId": "30181683",
-      "ownerId": 100001,
+      "sourceId": 30181683,
+      "ownerId": 21311231245123,
       "price": 1,
       "condition": "封面没有了",
       "comment": "没什么想说的！",
       "contact": "paopaoawake",
       "location": "St Kilda, VIC",
-      "book": {},
-      "owner": {}
+      "book": {
+        "id": 1,
+        "title": "同情者",
+        "sourceId": "30181683",
+        "image": {
+          "src": "https://img9.doubanio.com/view/subject/l/public/s29852464.jpg"
+        },
+        "author": "阮清越 [译]陈恒仕",
+        "rating": "8.5"
+      },
+      "owner": {
+            "id": 2,
+            "userId": 21311231245124,
+            "alias": "醒来的泡泡",
+            "avatar": "ddawd129201",
+            "ownedBooks": 1
+      }
     }
   ],
   "users": [

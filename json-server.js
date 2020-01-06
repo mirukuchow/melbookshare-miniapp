@@ -34,7 +34,7 @@ const updateBookNewCopy = (sourceId, bookItem) => {
 const getCopy = sourceId => {
   const result = db
     .get("copies")
-    .find({ sourceId: parseInt(sourceId, 10) })
+    .filter({ sourceId: sourceId })
     .value();
   return result;
 };
@@ -84,7 +84,6 @@ server.post("/books", (req, res) => {
 
   const result = getBook(bookItem.sourceId);
   if (result) {
-    console.log(true);
     bookItem.availableBooks = getBook(bookItem.sourceId).availableBooks + 1;
     updateBookNewCopy(bookItem.sourceId, bookItem);
   } else {
@@ -94,6 +93,17 @@ server.post("/books", (req, res) => {
   addCopy(copyItem);
 
   res.jsonp("success");
+});
+
+
+server.get("/copies", (req, res) => {
+  console.log(req.query.sourceId);
+  let bookItem = {
+    sourceId: parseInt(req.query.sourceId, 10),
+  };
+  const result = getCopy(bookItem.sourceId);
+  console.log(result);
+  res.jsonp(result);
 });
 
 server.use(router);
