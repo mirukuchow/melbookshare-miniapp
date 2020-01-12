@@ -14,16 +14,6 @@ class AddInfo extends Component {
     this.fetchData = fetchDouban;
     this.state = {
       book: {
-        id: 1,
-        title: "同情者",
-        sourceId: "30181683",
-        images: {
-          small: "https://img9.doubanio.com/view/subject/l/public/s29852464.jpg"
-        },
-        author: "阮清越 [译]陈恒仕",
-        rating: {
-          average: "8.5"
-        }
       },
       condition: "",
       location: "",

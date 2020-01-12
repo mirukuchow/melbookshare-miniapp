@@ -50,6 +50,7 @@ export default class Index extends Component {
     console.log(value);
     this.fetchData({
       search: value,
+      resource: "search",
       success: this.fetchDataSuccess.bind(this),
       fail: this.fetchDataFail.bind(this)
     });
@@ -68,6 +69,13 @@ export default class Index extends Component {
   //When pressing enter button
   onConfirmSearchBar() {
     this.search(this.state.search);
+  }
+
+  onClickSelectBook(book) {
+    Taro.navigateTo({
+      url: `/pages/publish/addinfo?bookid=${book.id}`
+    });
+    console.log(book.id)
   }
 
   config = {
@@ -96,7 +104,7 @@ export default class Index extends Component {
             onActionClick={this.onActionClickSearchBar.bind(this)}
             onConfirm={this.onConfirmSearchBar.bind(this)}
           />
-          <DoubanList data={books} selected={false} />
+          <DoubanList data={books} onClickSelectBook={this.onClickSelectBook} />
         </View>
       </View>
     );
