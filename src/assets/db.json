@@ -12,6 +12,117 @@
       "availableBooks": 2,
       "originalPrice": "65",
       "priceFrom": "5"
+    },
+    {
+      "title": "你好，旧时光（上 下）",
+      "sourceId": null,
+      "image": {
+        "src": "https://img3.doubanio.com/view/subject/s/public/s4293097.jpg"
+      },
+      "author": [
+        "八月长安"
+      ],
+      "rating": "8.7",
+      "availableBooks": 1,
+      "originalPrice": "39.80元",
+      "priceFrom": 0
+    },
+    {
+      "title": "如果，喵",
+      "sourceId": null,
+      "image": {
+        "src": "https://img3.doubanio.com/view/subject/s/public/s24641681.jpg"
+      },
+      "author": [
+        "有时右逝"
+      ],
+      "rating": "8.7",
+      "availableBooks": 1,
+      "originalPrice": "32.90元",
+      "priceFrom": 0
+    },
+    {
+      "title": "鸭子，鸭子，鹅",
+      "sourceId": null,
+      "image": {
+        "src": "https://img3.doubanio.com/view/subject/s/public/s5967216.jpg"
+      },
+      "author": [
+        "(美)泰德·希尔 文/图"
+      ],
+      "rating": "7.8",
+      "availableBooks": 1,
+      "originalPrice": "12.00元",
+      "priceFrom": 0
+    },
+    {
+      "title": "中国新童话·我和大鹅雪雪",
+      "sourceId": null,
+      "image": {
+        "src": "https://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-lpic.gif"
+      },
+      "author": [],
+      "rating": "0.0",
+      "availableBooks": 1,
+      "originalPrice": "20.10元",
+      "priceFrom": 0
+    },
+    {
+      "title": "下一个大泡泡",
+      "sourceId": null,
+      "image": {
+        "src": "https://img3.doubanio.com/view/subject/s/public/s3039706.jpg"
+      },
+      "author": [
+        "（美）哈里.S.登特（Harry S. Dent）"
+      ],
+      "rating": "7.7",
+      "availableBooks": 1,
+      "originalPrice": "28.00元",
+      "priceFrom": 0
+    },
+    {
+      "title": "軍區大院",
+      "sourceId": null,
+      "image": {
+        "src": "https://img3.doubanio.com/view/subject/s/public/s28329077.jpg"
+      },
+      "author": [
+        "泡泡雪兒",
+        "広"
+      ],
+      "rating": "8.0",
+      "availableBooks": 1,
+      "originalPrice": "NT550",
+      "priceFrom": 0
+    },
+    {
+      "title": "在别人的句子里",
+      "sourceId": null,
+      "image": {
+        "src": "https://img3.doubanio.com/view/subject/s/public/s33441147.jpg"
+      },
+      "author": [
+        "陈以侃"
+      ],
+      "rating": "8.1",
+      "availableBooks": 1,
+      "originalPrice": "48.00元",
+      "priceFrom": 0
+    },
+    {
+      "title": "下一个大泡泡",
+      "sourceId": 1440229,
+      "image": {
+        "src": "https://img3.doubanio.com/view/subject/s/public/s3039706.jpg"
+      },
+      "author": [
+        "（美）哈里.S.登特（Harry S. Dent）"
+      ],
+      "rating": "7.7",
+      "availableBooks": 1,
+      "originalPrice": "28.00元",
+      "priceFrom": 0
     }
   ],
   "copies": [
@@ -62,12 +173,195 @@
         "rating": "8.5"
       },
       "owner": {
-            "id": 2,
-            "userId": 21311231245124,
-            "alias": "醒来的泡泡",
-            "avatar": "ddawd129201",
-            "ownedBooks": 1
+        "id": 2,
+        "userId": 21311231245124,
+        "alias": "醒来的泡泡",
+        "avatar": "ddawd129201",
+        "ownedBooks": 1
       }
+    },
+    {
+      "sourceId": null,
+      "price": "3",
+      "condition": "1",
+      "comment": "1",
+      "contact": "4",
+      "location": "4",
+      "book": {
+        "title": "你好，旧时光（上 下）",
+        "sourceId": null,
+        "image": {
+          "src": "https://img3.doubanio.com/view/subject/s/public/s4293097.jpg"
+        },
+        "author": [
+          "八月长安"
+        ],
+        "rating": "8.7",
+        "availableBooks": 1,
+        "originalPrice": "39.80元",
+        "priceFrom": 0
+      },
+      "owner": []
+    },
+    {
+      "sourceId": null,
+      "price": "",
+      "condition": "",
+      "comment": "",
+      "contact": "",
+      "location": "",
+      "book": {
+        "title": "如果，喵",
+        "sourceId": null,
+        "image": {
+          "src": "https://img3.doubanio.com/view/subject/s/public/s24641681.jpg"
+        },
+        "author": [
+          "有时右逝"
+        ],
+        "rating": "8.7",
+        "availableBooks": 1,
+        "originalPrice": "32.90元",
+        "priceFrom": 0
+      },
+      "owner": []
+    },
+    {
+      "sourceId": null,
+      "price": "",
+      "condition": "",
+      "comment": "",
+      "contact": "",
+      "location": "",
+      "book": {
+        "title": "鸭子，鸭子，鹅",
+        "sourceId": null,
+        "image": {
+          "src": "https://img3.doubanio.com/view/subject/s/public/s5967216.jpg"
+        },
+        "author": [
+          "(美)泰德·希尔 文/图"
+        ],
+        "rating": "7.8",
+        "availableBooks": 1,
+        "originalPrice": "12.00元",
+        "priceFrom": 0
+      },
+      "owner": []
+    },
+    {
+      "sourceId": null,
+      "price": "",
+      "condition": "",
+      "comment": "",
+      "contact": "",
+      "location": "",
+      "book": {
+        "title": "中国新童话·我和大鹅雪雪",
+        "sourceId": null,
+        "image": {
+          "src": "https://img3.doubanio.com/f/shire/5522dd1f5b742d1e1394a17f44d590646b63871d/pics/book-default-lpic.gif"
+        },
+        "author": [],
+        "rating": "0.0",
+        "availableBooks": 1,
+        "originalPrice": "20.10元",
+        "priceFrom": 0
+      },
+      "owner": []
+    },
+    {
+      "sourceId": null,
+      "price": "",
+      "condition": "",
+      "comment": "",
+      "contact": "",
+      "location": "",
+      "book": {
+        "title": "下一个大泡泡",
+        "sourceId": null,
+        "image": {
+          "src": "https://img3.doubanio.com/view/subject/s/public/s3039706.jpg"
+        },
+        "author": [
+          "（美）哈里.S.登特（Harry S. Dent）"
+        ],
+        "rating": "7.7",
+        "availableBooks": 1,
+        "originalPrice": "28.00元",
+        "priceFrom": 0
+      },
+      "owner": []
+    },
+    {
+      "sourceId": null,
+      "price": "",
+      "condition": "",
+      "comment": "",
+      "contact": "",
+      "location": "",
+      "book": {
+        "title": "軍區大院",
+        "sourceId": null,
+        "image": {
+          "src": "https://img3.doubanio.com/view/subject/s/public/s28329077.jpg"
+        },
+        "author": [
+          "泡泡雪兒",
+          "広"
+        ],
+        "rating": "8.0",
+        "availableBooks": 1,
+        "originalPrice": "NT550",
+        "priceFrom": 0
+      },
+      "owner": []
+    },
+    {
+      "sourceId": null,
+      "price": "",
+      "condition": "",
+      "comment": "",
+      "contact": "",
+      "location": "",
+      "book": {
+        "title": "在别人的句子里",
+        "sourceId": null,
+        "image": {
+          "src": "https://img3.doubanio.com/view/subject/s/public/s33441147.jpg"
+        },
+        "author": [
+          "陈以侃"
+        ],
+        "rating": "8.1",
+        "availableBooks": 1,
+        "originalPrice": "48.00元",
+        "priceFrom": 0
+      },
+      "owner": []
+    },
+    {
+      "sourceId": 1440229,
+      "price": "3",
+      "condition": "1",
+      "comment": "",
+      "contact": "4",
+      "location": "2",
+      "book": {
+        "title": "下一个大泡泡",
+        "sourceId": 1440229,
+        "image": {
+          "src": "https://img3.doubanio.com/view/subject/s/public/s3039706.jpg"
+        },
+        "author": [
+          "（美）哈里.S.登特（Harry S. Dent）"
+        ],
+        "rating": "7.7",
+        "availableBooks": 1,
+        "originalPrice": "28.00元",
+        "priceFrom": 0
+      },
+      "owner": []
     }
   ],
   "users": [

@@ -40,14 +40,13 @@ class AddInfo extends Component {
 
   onSubmit(event) {
     const { book, condition, location, price, contact, comment } = this.state;
-    console.log(this.state);
-    const { statusCode } = response;
+    console.log('book',book);
     const response = Taro.request({
       method: "POST",
       url: `${API_DB}/books`,
       data: {
         title: book.title,
-        sourceId: book.sourceId,
+        sourceId: book.id,
         image: book.images.small,
         author: book.author,
         rating: book.rating.average,
@@ -59,7 +58,7 @@ class AddInfo extends Component {
         location: location
       }
     });
-
+    const { statusCode } = response;
     switch ((response, statusCode)) {
       case 200:
         console.log("提交成功！");

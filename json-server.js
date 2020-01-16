@@ -17,7 +17,7 @@ server.use(jsonServer.bodyParser);
 const getBook = sourceId => {
   const result = db
     .get("books")
-    .find({ sourceId: sourceId })
+    .find({ sourceId: parseInt(sourceId) })
     .value();
   return result;
 };
@@ -36,6 +36,7 @@ const getCopy = sourceId => {
     .get("copies")
     .filter({ sourceId: sourceId })
     .value();
+  console.log(result);
   return result;
 };
 
@@ -59,10 +60,11 @@ const addCopy = copyItem => {
 // console.log(copy);
 
 server.post("/books", (req, res) => {
+  console.log("Req****", req.body)
   let bookItem = {
     title: req.body.title,
     sourceId: parseInt(req.body.sourceId, 10),
-    image: [{ src: req.body.image }],
+    image: { src: req.body.image },
     author: req.body.author,
     rating: req.body.rating,
     availableBooks: 1,
@@ -75,12 +77,14 @@ server.post("/books", (req, res) => {
     ownerId: req.body.ownerId,
     price: req.body.price,
     condition: req.body.condition,
-    comment: req.body.condition,
+    comment: req.body.comment,
     contact: req.body.contact,
-    location: req.body.contact,
+    location: req.body.location,
     book: bookItem,
     owner: []
   };
+  // console.log("req: " + req.body.sourceId)
+  // console.log("copyItem: " + copyItem.sourceId)
 
   const result = getBook(bookItem.sourceId);
   if (result) {
